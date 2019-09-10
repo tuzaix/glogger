@@ -58,3 +58,6 @@ func GetLogger(logNames ...string) (logger *Logger) {
 	return nil
 }
 
+func GLogger(logNames ...string) (logger *Logger) {
+    return GetLogger(logNames...)
+}
