@@ -1,4 +1,4 @@
-module glogger
+module github.com/tuzaix/glogger
 
 go 1.12
 
