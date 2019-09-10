@@ -1,0 +1,20 @@
+[loggers]
+    [loggers.1]
+        log_name            = "logger1"
+        log_level		    = "INFO"
+        log_console		    = 0
+        log_dir		        = "/tmp"
+        log_file	        = "yourname1_log"
+        log_reserve	        = 30
+        log_date_format	    = "%Y%m%d%H%M%S"
+        log_color	        = 1
+
+     [loggers.2]
+        log_name            = "logger2"
+        log_level		    = "INFO"
+        log_console		    = 0
+        log_dir		        = "/tmp"
+        log_file	        = "yourname2_log"
+        log_reserve	        = 30
+        log_date_format	    = "%Y%m%d%H%M%S"
+        log_color	        = 1
