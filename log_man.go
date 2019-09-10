@@ -15,8 +15,10 @@ var (
 )
 
 func InitLogger(confFile string) {
-	GlobalLoggers, GlobalLoggerConfs = NewLoggers(confFile)
-    initDefaultLoggerName()
+    if GlobalLoggers == nil && GlobalLoggerConfs == nil {
+    	GlobalLoggers, GlobalLoggerConfs = NewLoggers(confFile)
+        initDefaultLoggerName()
+    }
 }
 
 func initDefaultLoggerName() {
