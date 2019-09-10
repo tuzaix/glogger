@@ -58,11 +58,11 @@ type Logger struct {
 	mtime  string
 }
 
-func NewLoggers(confFile string) (loggers map[string]*Logger) {
-	logConfs := NewLoggerConf(confFile)
+func NewLoggers(confFile string) (loggers map[string]*Logger, loggerConfs map[string]LoggerConf) {
+	loggerConfs = NewLoggerConf(confFile)
 	loggers = make(map[string]*Logger)
 	logLoggers := make([]*Logger, 0)
-	for _, conf := range logConfs {
+	for _, conf := range loggerConfs {
 		tmp_logger := NewLogger(conf.LogLevel, conf.LogDir, conf.LogFile, conf.LogReserve, conf.LogDataFormat, conf.LogConsole, conf.LogColor)
 		loggers[conf.LogName] = tmp_logger
 		logLoggers = append(logLoggers, tmp_logger)
